@@ -74,7 +74,7 @@ function lp_set_title( av_title , av_screen){
 }
 </script>
 </head>
-<body onload="lp_initialize();" style="overflow-x:hidden; overflow-y:auto;" >
+<body style="overflow-x:hidden; overflow-y:auto;" >
 
 	<div class="wrapper " style='margin-top:0px;'>
     	<div class="container" >

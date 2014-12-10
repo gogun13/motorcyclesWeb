@@ -12,6 +12,30 @@ public class UserDetailsDao {
 		db = new EnjoyConectDb();
 	}
 	
+	public static void main(String[] args) {
+		EnjoyConectDb db = new EnjoyConectDb();
+		String 				sql			 	= null;
+		ResultSet 			rs 				= null;
+		String				passWord		= null;
+		
+		passWord	= EnjoyEncryptDecrypt.enCryption("admin", "admin");
+		sql 		= " SELECT * from motoruser ";
+		
+		System.out.println("[EnjoyMotorUserDao][userSelect] sql :: " + sql);
+		
+	    try {
+			rs 			= db.executeQuery(sql);
+			while(rs.next()){
+		    	
+		    	System.out.println(rs.getString("mUser"));
+		    }
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
 	public UserDetailsBean userSelect(String userId, String pass){
 		System.out.println("[EnjoyMotorUserDao][userSelect][Begin]");
 		

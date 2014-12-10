@@ -42,7 +42,7 @@ import th.go.motorcycles.web.enjoy.utils.MotorUtil;
         	userBean = userDao.userSelect(userId, passWord);
         	
         	if(userBean==null){
-        		easUtil.writeMSG("���ʼ�ҹ���١��ͧ");
+        		easUtil.writeMSG("รหัสผ่านไม่ถูกต้อง");
         	}else{
         		session.setAttribute("userBean", userBean);
         		easUtil.writeMSG("OK");

@@ -1,10 +1,7 @@
 package th.go.motorcycles.web.enjoy.utils;
 
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,7 +25,7 @@ public class MotorUtil extends EnjoyUtils {
     public void writeMSG(String msg){
         PrintWriter            print                   = null;
         try{
-           response.setContentType("text/html");
+           response.setContentType("text/html; charset=UTF-8");
            print = this.response.getWriter();
            print.write(msg);
         }catch (Exception e) {
